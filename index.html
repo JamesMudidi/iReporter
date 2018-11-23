@@ -1,67 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html >
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>iReporter</title>
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
 	</head>
+
 	<body>
-
-	<div class="header">
-		<h1 align="center" style="h1">iReporter</h1>
-		<div class="topnav" id="myTopnav">
-			<a href="index.html" class="active">Home</a>
-			<a href="redflag.html">RedFlag</a>
-			<a href="interven.html">Interven</a>
-			<a href="profile.html">Profile</a>
-			<a href="login.html">Logout</a>
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-				<i class="fa fa-bars"></i>
-			</a>
+		<div class="login-page">
+			<div class="form">
+			<div class="info">Welcome iReporter</div>
+			<div class="heading">Login and Let's Get Started</div>
+				<form class="login-form" action="home.html">
+					<input type="text" placeholder="Username" required=""/>
+					<input type="password" placeholder="Password" required=""/>
+					<button>login</button>
+					<br>
+					<p class="message">Not registered? <a href="register.html">Create an account Here</a></p>
+					<br>
+					<p class="message"><a href="adminlogin.html">Administrator Login</a></p>
+				</form>
+			</div>
 		</div>
-	</div>
-
-	<div class="page">
-		<div class="main">
-			<h2>Home</h2>
-			<p>Welcome to iReporter</p>
-			<p>
-				Corruption is a huge bane to development in Africa.
-				African countries must develop novel and localised solutions that will curb this menace,
-				hence the birth of iReporter. iReporter enables any/every citizen to bring any form of
-				corruption to the notice of appropriate authorities and the general public.
-				Users can also report on things that need government intervention
-			</p>
-			<p>
-				Provide us with the information to support ourselves and build a better nation
-			</p>
-		</div>
-
-		<div class="right">
-			<h2>Why</h2>
-			<p>To Report any corruption cases and Incidents that should be worked on by the goverment</p>
-			<h2>Where</h2>
-			<p>All round he country. Report any incident around the country</p>
-			<h2>When</h2>
-			<p>Any day, Everyday. You can report anytime</p>
-			<h2>How</h2>
-			<p>Register with the app and start reporting</p>
-		</div>
-	</div>
-
-
-	<div class="footer"> &copy; iRepoter 2018 | All Rights Reserved</div>
-	<script>
-	function myFunction() {
-		var x = document.getElementById("myTopnav");
-		if (x.className === "topnav") {
-			x.className += " responsive";
-		} else {
-			x.className = "topnav";
-		}
-	}
-	</script>
 	</body>
 </html>

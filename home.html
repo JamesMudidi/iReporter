@@ -6,15 +6,16 @@
 		<title>iReporter</title>
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="js/index.js"></script>
 	</head>
 	<body>
 
 	<div class="header">
 		<h1 align="center" style="h1">iReporter</h1>
 		<div class="topnav" id="myTopnav">
-			<a href="admin.html">Home</a>
-			<a href="redflagdetailsadmin.html" class="active">Details</a>
+			<a href="home.html" class="active">Home</a>
+			<a href="redflag.html">RedFlag</a>
+			<a href="interven.html">Interven</a>
+			<a href="profile.html">Profile</a>
 			<a href="index.html">Logout</a>
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 				<i class="fa fa-bars"></i>
@@ -24,7 +25,7 @@
 
 	<div class="page">
 		<div class="main">
-			<h2>Coruption Report</h2>
+			<h2>Home</h2>
 			<p>Welcome to iReporter</p>
 			<p>
 				Corruption is a huge bane to development in Africa.
@@ -33,30 +34,34 @@
 				corruption to the notice of appropriate authorities and the general public.
 				Users can also report on things that need government intervention
 			</p>
-            
-            <!-- Photo Grid -->
+			<p>
+				Provide us with the information to support ourselves and build a better nation
+			</p>
 		</div>
 
 		<div class="right">
-			<h2>Reporter</h2>
-                <p>Turinawe Smith</p>
-
-			<h2>Suspect</h2>
-                <p>Magambo John</p>
-
-			<h2>District</h2>
-                <p>Kampala</p>
-
-			<h2>Village</h2>
-                <p>Kireka</p>
-
-			<h2>Location</h2>
-                <p><button onclick="geoFindMe()">See location</button></p>
-                <div id="out"></div>
+			<h2>Why</h2>
+			<p>To Report any corruption cases and Incidents that should be worked on by the goverment</p>
+			<h2>Where</h2>
+			<p>All round he country. Report any incident around the country</p>
+			<h2>When</h2>
+			<p>Any day, Everyday. You can report anytime</p>
+			<h2>How</h2>
+			<p>Register with the app and start reporting</p>
 		</div>
 	</div>
 
 
 	<div class="footer"> &copy; iRepoter 2018 | All Rights Reserved</div>
-		</body>
+	<script>
+	function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
+	</script>
+	</body>
 </html>
