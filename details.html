@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>iReporter</title>
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js/index.js"></script>
+	</head>
+	<body>
+
+	<div class="header">
+		<h1 align="center" style="h1">iReporter</h1>
+		<div class="topnav" id="myTopnav">
+			<a href="index.html">Home</a>
+			<a href="redflag.html">RedFlag</a>
+			<a href="interven.html">Interven</a>
+			<a href="profile.html">Profile</a>
+			<a href="details.html" class="active">Details</a>
+			<a href="login.html">Logout</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+	</div>
+
+	<div class="page">
+		<div class="main">
+			<h2>Intervention Report</h2>
+			<p>Kisoro District Land Slide</p>
+			<p>
+				Over 1,000 households have been destroyed and 2, 000 people displaced
+				from their houses in five sub counties of Kisoro district from landslides
+				and floods that have hit the area. The major sub counties affected included
+				Nyarubuye, Kanaba, Murora, Nyabwishenya and Busanza.
+				This rainfall that was characterized by severe strong wind and hail stones
+				left two secondary schools, over 50 families a church and many others
+				affected in the above mentioned sub counties.
+			</p>
+            
+            <!-- Photo Grid -->
+            <h2>Images</h2>
+            <div class="row"> 
+              <div class="column">
+              <a target="_blank" href="images/1.jpg">
+                <img src="images/1.jpg" style="width:100%" scr="/images/1.jpg">
+              </a>
+              </div>
+              <div class="column">
+              <a target="_blank" href="images/2.jpg">
+                <img src="images/2.jpg" style="width:100%" scr="/images/2.jpg">
+              </a>
+              </div>
+              <div class="column">
+              <a target="_blank" href="images/3.jpg">
+                <img src="images/3.jpg" style="width:100%" scr="/images/3.jpg">
+              </a>
+              </div>
+              <div class="column">
+              <a target="_blank" href="images/4.jpg">
+                <img src="images/4.jpg" style="width:100%" scr="/images/4.jpg">
+              </a>
+              </div>
+            </div>
+		</div>
+
+		<div class="right">
+			<h2>Summery</h2>
+                <p>Kisoro Landslide</p>
+
+			<h2>Affected Areas</h2>
+                <p>Nyarubuye, Kanaba, Murora, Nyabwishenya and Busanza.</p>
+
+			<h2>In Numbers</h2>
+                <p>Over 1,000 households destroyed</p>
+                <p>Over 2,000 people displaced</p>
+
+			<h2>Location</h2>
+                <p><button onclick="geoFindMe()">See location</button></p>
+                <div id="out"></div>
+		</div>
+	</div>
+
+
+	<div class="footer"> &copy; iRepoter 2018 | All Rights Reserved</div>
+		</body>
+</html>

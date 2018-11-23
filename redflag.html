@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>iReporter</title>
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+
+	<div class="header">
+		<h1 align="center" style="h1">iReporter</h1>
+		<div class="topnav" id="myTopnav">
+			<a href="index.html">Home</a>
+			<a href="redflag.html" class="active">RedFlag</a>
+			<a href="interven.html">Interven</a>
+			<a href="profile.html">Profile</a>
+			<a href="login.html">Logout</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+	</div>
+
+	<div class="page">
+		<div class="main">
+			<h2>RedFlag</h2>
+			<p>Welcome to iReporter</p>
+			<p>
+				Corruption is a huge bane to development in Africa.
+				African countries must develop novel and localised solutions that will curb this menace,
+				hence the birth of iReporter. iReporter enables any/every citizen to bring any form of
+				corruption to the notice of appropriate authorities and the general public.
+				Users can also report on things that need government intervention
+			</p>
+			<div style="overflow-x:auto;">
+				<table>
+					<tr>
+						<th>Name of Reporter</th>
+						<th>Suspect</th>
+						<th>District</th>
+						<th>Village</th>
+						<th>Summary</th>
+						<th>View</th>
+						<th>Edit</th>
+						<th>Delete</th>
+					</tr>
+					<tr>
+						<td>Turinawe Smith</td>
+						<td>Magambo John</td>
+						<td>Kampala</td>
+						<td>Kireka</td>
+						<td>Wanted a bribe from me</td>
+						<td><button><a href="redflagdetails.html">Details</a></button></td>
+						<td><button>Edit</button></td>
+						<td><button>Delete</button></td>
+					</tr>
+					<tr>
+						<td>Turinawe Smith</td>
+						<td>Magambo John</td>
+						<td>Kampala</td>
+						<td>Kireka</td>
+						<td>Wanted a bribe from me</td>
+						<td><button><a href="redflagdetails.html">Details</a></button></td>
+						<td><button>Edit</button></td>
+						<td><button>Delete</button></td>
+					</tr>
+					<tr>
+						<td>Turinawe Smith</td>
+						<td>Magambo John</td>
+						<td>Kampala</td>
+						<td>Kireka</td>
+						<td>Wanted a bribe from me</td>
+						<td><button><a href="redflagdetails.html">Details</a></button></td>
+						<td><button>Edit</button></td>
+						<td><button>Delete</button></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="right">
+			<div class="form">
+			<div class="info">Create a Corruption Case</div>
+				<form class="login-form">
+					<input type="text" placeholder="Name of Reporter" required=""/>
+					<input type="text" placeholder="Name of Suspect" required=""/>
+					<input type="text" placeholder="District" required=""/>
+					<input type="text" placeholder="Village" required=""/>
+					<input type="text" placeholder="Summary" required=""/>
+					<textarea type="textarea" placeholder="Details" required=""/></textarea>
+					<input type="file" name="pic" accept="image/*">
+					<input type="file" name="video" accept="video/*">
+					<button>Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="footer"> &copy; iRepoter 2018 | All Rights Reserved</div>
+	<script>
+	function menuFunction() {
+		var nav = document.getElementById("myTopnav");
+		if (nav.className === "topnav") {
+			nav.className += " responsive";
+		} else {
+			nav.className = "topnav";
+		}
+	}
+	</script>
+	</body>
+</html>

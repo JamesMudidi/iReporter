@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>iReporter</title>
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js/index.js"></script>
+	</head>
+	<body>
+
+	<div class="header">
+		<h1 align="center" style="h1">iReporter</h1>
+		<div class="topnav" id="myTopnav">
+			<a href="index.html">Home</a>
+			<a href="redflag.html">RedFlag</a>
+			<a href="interven.html">Interven</a>
+			<a href="profile.html">Profile</a>
+			<a href="details.html" class="active">Details</a>
+			<a href="login.html">Logout</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+	</div>
+
+	<div class="page">
+		<div class="main">
+			<h2>Coruption Report</h2>
+			<p>Welcome to iReporter</p>
+			<p>
+				Corruption is a huge bane to development in Africa.
+				African countries must develop novel and localised solutions that will curb this menace,
+				hence the birth of iReporter. iReporter enables any/every citizen to bring any form of
+				corruption to the notice of appropriate authorities and the general public.
+				Users can also report on things that need government intervention
+			</p>
+           
+            <!-- Photo Grid -->
+		</div>
+
+		<div class="right">
+			<h2>Reporter</h2>
+                <p>Turinawe Smith</p>
+
+			<h2>Suspect</h2>
+                <p>Magambo John</p>
+
+			<h2>District</h2>
+                <p>Kampala</p>
+
+			<h2>Village</h2>
+                <p>Kireka</p>
+
+			<h2>Location</h2>
+                <p><button onclick="geoFindMe()">See location</button></p>
+                <div id="out"></div>
+		</div>
+	</div>
+
+
+	<div class="footer"> &copy; iRepoter 2018 | All Rights Reserved</div>
+		</body>
+</html>
