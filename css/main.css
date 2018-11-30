@@ -64,7 +64,7 @@ body {
 	padding: 0 1em;
 }
   .main {
-	width: 80%;
+	width: 100%;
     padding: 0 15px 0 15px;
   }
   .right {
@@ -294,101 +294,124 @@ img:hover {
 /*
  * Define the widths: play around with these to get a best fit.
  */
-@margin: 30px;
+ 
+@margin: 15px;
 @text-width: 180px;
-@num-width: 80px;
+@num-width: 180px;
 
 /*
  * Basic styles, good for a large display. Everything fits in
  * one row, no wrapping. All text based cells grow equally.
  */
 
-// Main container: initialize the flex, direction is row, no wrapping. width 100%
 .table-row {
-    display: flex;          display: -webkit-flex;
-    flex-direction: row;    -webkit-flex-direction: row;
-    flex-wrap: no-wrap;     -webkit-flex-wrap: no-wrap;
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-wrap: no-wrap;
+  -webkit-flex-wrap: no-wrap;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-
-// Wrappers around cells and other wrappers: flex, row
 .wrapper {
-  display: flex;           display: -webkit-flex;
-  flex-direction: row;     -webkit-flex-direction: row;
-  flex-grow: 0;            -webkit-flex-grow: 0;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-grow: 0;
+  -webkit-flex-grow: 0;
 }
-
-// Text cells and wrappers: grow equally when there is extra space
-.text-4, .text-2, .text {
-  flex-grow: 1;           -webkit-flex-grow: 1;
+.text-4,
+.text-2,
+.text {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
 }
-
-// Text cells: truncate and show ellipsis when not enough space
+.num-4,
+.num-2,
+.num {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+}
 .text {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   padding-right: 20px;
 }
-
-// Fix the minimum width of the leaf level cells
-.text {
-  width: @text-width;
-}
-
 .num {
-  width: @num-width;
-  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: 20px;
 }
-
+.text {
+  width: 50%;
+}
+.num {
+  width: 50%;
+}
 /*
  * Media queries: optimize for different screen widths.
  */
-
-// convenience mixin for setting wrapper styles vertical
-.vertical() {
-  // Let the wrapper flex vertically, so we get 2 rows
-  flex-direction: column;     -webkit-flex-direction: column;
-  // can't have the children grow, since this means vertical growth
-  div {
-    flex-grow: 0;  -webkit-flex-grow: 0;
-    // but let them grow horizontally, 100% to fill the wrapper
+@media all and (max-width: 1100px) {
+  .text-4,
+  .num-4 {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+  }
+  .text-4 div,
+  .num-4 div {
+    flex-grow: 0;
+    -webkit-flex-grow: 0;
     width: 100%;
   }
-}
-
-// First break: when one row does not fit, make it 2 rows
-@media all and (max-width: (@margin*2 + @text-width*4 + @num-width*4)) {
-  // inner wrappers vertical
-  .text-2, .num-2 {
-    .vertical();
+  .text-4 {
+    width: 100%;
   }
-  // fix the widths of the inner level wrappers, else they take
-  // children's natural size
-  .text-2 { width: @text-width; }
-  .num-2  { width: @num-width;  }
-}
-
-// Second break: when two rows is not enough, make it four
-@media all and (max-width: (@margin*2 + @text-width*2 + @num-width*2)) {
-  // Outer wrappers also vertical
-  .text-4, .num-4 {
-    .vertical();
+  .num-4 {
+    width: 100%;
   }
-  // fix widths
-  .text-4 { width: @text-width; }
-  .num-4  { width: @num-width;  }
-}
+    .num {
+    text-align: right;
+  }
 
-// Final: collapse all of them into one single column
-@media all and (max-width: (@margin*2 + @text-width + @num-width)) {
-  // wrap the main row container
+}
+@media all and (max-width: 580px) {
+  .text-4,
+  .num-4 {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+  }
+  .text-4 div,
+  .num-4 div {
+    flex-grow: 0;
+    -webkit-flex-grow: 0;
+    width: 100%;
+  }
+  .text-4 {
+    width: 100%;
+  }
+  .num-4 {
+    width: 100%;
+  }
+    .num {
+    text-align: right;
+  }
+
+}
+@media all and (max-width: 320px) {
   .table-row {
-    .vertical();
+    flex-direction: column;
+    -webkit-flex-direction: column;
   }
-  // force the num cells to left-align to look better
+  .table-row div {
+    flex-grow: 0;
+    -webkit-flex-grow: 0;
+    width: 100%;
+  }
   .num {
     text-align: left;
   }
@@ -402,19 +425,19 @@ body {
 }
 
 .table-row {
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid #000;
   border-collapse: collapse;
   padding-top: 5px;
 }
 
 .table-row.header {
-  background-color: #FFEEDB;
+  background-color: #4CAF50;
   font-weight: bold;
   padding-top: 8px;
   padding-bottom: 8px;
 }
 /* Some borders to show the behaviour. Uncomment to see it in action */
-/*
+
 .text-2, .num-2 {
   border: 1px solid green;
   padding: 2px;
@@ -422,10 +445,9 @@ body {
 }
 
 .text-4, .num-4 {
-  border: 1px solid red;
+  border: 1px #ddd;
   margin: 2px;
 }
-*/
 
 .footer {
 	background-color: #fff;
